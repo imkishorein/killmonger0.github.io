@@ -10,10 +10,16 @@
         margin-top: -20px;
     }
     
+    .logo {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 100px;
+    }
+    
     .image .heading {
         color: black;
         text-align: center;
-        padding-top: 200px;
     }
     
     .image p {
@@ -33,9 +39,32 @@
         color: #C57ED3;
         border-color: #C57ED3;
     }
+    /*effect-underline*/
+    
+    a.effect-underline:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 1px solid;
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0, 1);
+        transform: scale(0, 1);
+    }
+    
+    a.effect-underline:hover:after {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
     
     .navbar {
-        height: 80px;
+        height: 50px;
         background-color: transparent;
         border: none;
         color: white;
@@ -45,29 +74,27 @@
     }
     
     .navbar-default .navbar-brand {
-        margin-top: 10px;
+        margin-top: 3px;
         color: white;
     }
     
     .navbar-default .navbar-brand:hover {
         color: #C57ED3;
-        border: 0px solid #C57ED3;
+        border: 0px solid linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%);
     }
     
     .navbar-default .navbar-nav>li>a {
         color: white;
-        margin: 10px 5px 5px 5px;
     }
     
     .navbar-default .navbar-nav>li>a:hover,
     .navbar-default .navbar-nav>li>a:active,
     .navbar-default .navbar-nav>li>a:focus {
         color: #C57ED3;
-        border: 1px solid #C57ED3;
     }
     
     .navbar-default .navbar-nav>li>a:visited {
-        color: #C57ED3;
+        color: white;
         text-decoration: none;
     }
     
@@ -98,7 +125,7 @@
     /* Solid class attached on scroll past first section */
     
     .navbar.solid {
-        background-color: #1d4bad;
+        background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
         -webkit-transition: background-color 1s ease 0s;
         transition: background-color 1s ease 0s;
         -webkit-box-shadow: 0 0 4px grey;
@@ -106,31 +133,27 @@
     }
     
     .navbar.solid .navbar-brand {
-        color: #C57ED3;
-        -webkit-transition: color 1s ease 0s;
+        color: white -webkit-transition: color 1s ease 0s;
         transition: color 1s ease 0s;
     }
     
     .navbar.solid .navbar-nav>li>a {
-        color: #C57ED3;
-        -webkit-transition: color 1s ease 0s;
+        color: white -webkit-transition: color 1s ease 0s;
         transition: color 1s ease 0s;
     }
     
-    .about {
-        background-color: whitesmoke;
-        color: #490D40;
+    #about {
+        color: black;
         height: 600px;
         text-align: center;
-        margin-top: -20px;
     }
     
-    .about h2 {
-        padding-top: 220px;
+    #about p {
+        text-align: justify;
     }
     
-    .about p {
-        padding: 20px 80px;
+    #about h3 {
+        padding-top: 40px;
     }
     
     .footer {
